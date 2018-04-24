@@ -11,6 +11,9 @@
             <li>
                 <a href="{% url 'article_detail' article.pk %}">{{article.title}}</a>
             </li>
+
+            {% empty %}
+                <p>Sorry, no articles in database.</p>
             {% endfor %}
         </ul>
     </body>
